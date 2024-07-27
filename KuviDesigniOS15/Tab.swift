@@ -7,12 +7,23 @@
 
 import SwiftUI
 
-struct Tab: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct TabItem: Identifiable {
+    
+    var id = UUID()
+    var text: String
+    var icon: String
+    var tab: Tab
     }
-}
 
-#Preview {
-    Tab()
+var tabItems = [
+    TabItem(text: "Learn Now" , icon:"house.fill", tab: .home ),
+    TabItem(text: "Explore" , icon:"magnifyingglass",  tab: .explore),
+    TabItem(text: "Notifications" , icon:"bell.fill", tab: .notifications),
+    TabItem(text: "Library" , icon: "rectangle.stack.fill",  tab: .library)
+]
+enum Tab: String {
+    case home
+    case explore
+    case notifications
+    case library
 }

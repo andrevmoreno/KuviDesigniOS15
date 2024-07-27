@@ -11,6 +11,12 @@
 		B4F6EFE32C509A2100DB6263 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6EFE22C509A2100DB6263 /* ContentView.swift */; };
 		B4F6EFE52C509A2200DB6263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F6EFE42C509A2200DB6263 /* Assets.xcassets */; };
 		B4F6EFE82C509A2200DB6263 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4F6EFE72C509A2200DB6263 /* Preview Assets.xcassets */; };
+		B4F6EFEF2C52DBCF00DB6263 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6EFEE2C52DBCF00DB6263 /* Styles.swift */; };
+		B4F6EFF12C52E8C400DB6263 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6EFF02C52E8C400DB6263 /* AccountView.swift */; };
+		B4F6EFF32C53099200DB6263 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6EFF22C53099200DB6263 /* HexagonView.swift */; };
+		B4F6EFF52C5333FA00DB6263 /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6EFF42C5333F900DB6263 /* BlogView.swift */; };
+		B4F6EFF72C54537D00DB6263 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6EFF62C54537D00DB6263 /* TabBar.swift */; };
+		B4F6EFF92C5458BE00DB6263 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6EFF82C5458BE00DB6263 /* Tab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		B4F6EFE22C509A2100DB6263 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B4F6EFE42C509A2200DB6263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4F6EFE72C509A2200DB6263 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B4F6EFEE2C52DBCF00DB6263 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		B4F6EFF02C52E8C400DB6263 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		B4F6EFF22C53099200DB6263 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
+		B4F6EFF42C5333F900DB6263 /* BlogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
+		B4F6EFF62C54537D00DB6263 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B4F6EFF82C5458BE00DB6263 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,12 @@
 			children = (
 				B4F6EFE02C509A2100DB6263 /* KuviDesigniOS15App.swift */,
 				B4F6EFE22C509A2100DB6263 /* ContentView.swift */,
+				B4F6EFF02C52E8C400DB6263 /* AccountView.swift */,
+				B4F6EFF62C54537D00DB6263 /* TabBar.swift */,
+				B4F6EFF82C5458BE00DB6263 /* Tab.swift */,
+				B4F6EFF22C53099200DB6263 /* HexagonView.swift */,
+				B4F6EFF42C5333F900DB6263 /* BlogView.swift */,
+				B4F6EFEE2C52DBCF00DB6263 /* Styles.swift */,
 				B4F6EFE42C509A2200DB6263 /* Assets.xcassets */,
 				B4F6EFE62C509A2200DB6263 /* Preview Content */,
 			);
@@ -137,8 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F6EFF12C52E8C400DB6263 /* AccountView.swift in Sources */,
+				B4F6EFF32C53099200DB6263 /* HexagonView.swift in Sources */,
+				B4F6EFEF2C52DBCF00DB6263 /* Styles.swift in Sources */,
+				B4F6EFF92C5458BE00DB6263 /* Tab.swift in Sources */,
 				B4F6EFE32C509A2100DB6263 /* ContentView.swift in Sources */,
+				B4F6EFF52C5333FA00DB6263 /* BlogView.swift in Sources */,
 				B4F6EFE12C509A2100DB6263 /* KuviDesigniOS15App.swift in Sources */,
+				B4F6EFF72C54537D00DB6263 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +304,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +334,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
