@@ -10,6 +10,7 @@ import SwiftUI
 struct TabBar: View {
     
     @State var selectedTab: Tab = .home
+    @State var tabItemWidth: CGFloat = 0
     
     var body: some View {
         ZStack (alignment: .bottom){
@@ -30,21 +31,7 @@ struct TabBar: View {
             
             HStack {
                 Spacer()
-                ForEach(tabItems) { item in
-                    Button { 
-                        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)){
-                            selectedTab = item.tab}
-                    } label: {
-                        VStack {
-                            Image(systemName: item.icon).font(.body.bold())
-                                .frame(width:80, height: 29)
-                            Text(item.text)
-                                .font(.caption2)
-                        }
-                        .frame(maxWidth: .infinity)
-                    }
-                    .foregroundStyle(selectedTab == item.tab ? .primary : .secondary)
-                }
+                buttons
                 
                 
             }.padding(.top, 14)
@@ -61,7 +48,7 @@ struct TabBar: View {
                         }
 
                         Circle()
-                            .fill((Color(red: 0.13, green: 0.95, blue: 1).opacity(0.8))).frame(width: 80)
+                            .fill((Color(red: 0.13, green: 0.95, blue: 1).opacity(0.7))).frame(width: tabItemWidth)
                         if selectedTab == .home{Spacer()}
                         if selectedTab == .explore{
                             Spacer()
@@ -98,7 +85,37 @@ struct TabBar: View {
                 .ignoresSafeArea()
         }
     }
+    
+    var buttons: some View {
+        ForEach(tabItems) { item in
+            Button {
+                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)){
+                    selectedTab = item.tab}
+            } label: {
+                VStack {
+                    Image(systemName: item.icon).font(.body.bold())
+                        .frame(width:80, height: 29)
+                    Text(item.text)
+                        .font(.caption2)
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .foregroundStyle(selectedTab == item.tab ? .primary : .secondary)
+            .blendMode(selectedTab == item.tab ? .overlay : .normal)
+            .overlay(
+                GeometryReader{ proxy in
+              //      Text("\(proxy.width)")
+                    Color.clear.preference(key:TabPreferenceKey.self, value: proxy.size.width)
+                }
+            ).onPreferenceChange(TabPreferenceKey.self){
+                value in
+                tabItemWidth = value
+            }
+        }
+        
+    }
 }
+
 
 #Preview {
     TabBar()
