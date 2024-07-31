@@ -75,7 +75,7 @@ struct AccountView: View {
     var links: some View {
         VStack(alignment: .leading, spacing: 12) {
             Section {
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: HomeView()) {
                     Label("Settings", systemImage: "gear")
                 }
                 Label("Billing", systemImage: "creditcard")
