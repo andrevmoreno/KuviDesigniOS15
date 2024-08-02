@@ -7,12 +7,10 @@
 
 import SwiftUI
 
-struct PreferenceKeys: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct ScrollPreferenceKeys: PreferenceKey {
 
-#Preview {
-    PreferenceKeys()
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
 }
