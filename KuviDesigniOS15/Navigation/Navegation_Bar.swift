@@ -9,16 +9,22 @@ import SwiftUI
 
 struct Navegation_Bar: View {
     var title = ""
+    @Binding var hasScrolled: Bool
+    
     
     var body: some View {
         ZStack{
             Color.clear
                 .background(.ultraThinMaterial)
                 .blur(radius: 20)
+                .opacity(hasScrolled ? 1 : 0)
             
             
-            Text("Featured").font(.largeTitle.weight(.bold)).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading).padding(.leading, 20)
+            Text(title)
+                .animatableFont(size: hasScrolled ? 22 :  34, weight: .bold)
+                .font(.largeTitle.weight(.bold)).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading).padding(.leading, 20)
                 .padding(.leading, 20)
+                .padding(.top, 20)
             //Lens
             HStack (spacing: 16) {
                 Image(systemName: "magnifyingglass").font(.body.weight(.bold))
@@ -36,12 +42,14 @@ struct Navegation_Bar: View {
                     .strokeStyle(cornerRadius: 18)
             }
             .frame(maxWidth: .infinity, alignment: .trailing).padding(.trailing, 20)
+            .padding(.top, 20)
+            .offset(y: hasScrolled ? -4 : 0)
         }
-        .frame(height: 70)
+        .frame(height: hasScrolled ? 44: 70)
         .frame(maxHeight: .infinity, alignment: .top)
     }
 }
 
 #Preview {
-    Navegation_Bar(title: "Featured")
+    Navegation_Bar(title: "Featured", hasScrolled: .constant(false))
 }

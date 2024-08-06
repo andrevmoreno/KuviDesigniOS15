@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B478C1662C5AA90A0009B4DE /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B478C1652C5AA90A0009B4DE /* PreferenceKeys.swift */; };
+		B478C1682C5ECE560009B4DE /* AnimatableFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B478C1672C5ECE560009B4DE /* AnimatableFontModifier.swift */; };
+		B478C16A2C5EE70E0009B4DE /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = B478C1692C5EE70E0009B4DE /* Course.swift */; };
 		B49B049D2C5A88D700725719 /* FeatureItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49B049C2C5A88D700725719 /* FeatureItem.swift */; };
 		B49B049F2C5A92C300725719 /* Navegation_Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49B049E2C5A92C300725719 /* Navegation_Bar.swift */; };
 		B4F6EFE12C509A2100DB6263 /* KuviDesigniOS15App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6EFE02C509A2100DB6263 /* KuviDesigniOS15App.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		B478C1652C5AA90A0009B4DE /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
+		B478C1672C5ECE560009B4DE /* AnimatableFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableFontModifier.swift; sourceTree = "<group>"; };
+		B478C1692C5EE70E0009B4DE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		B49B049C2C5A88D700725719 /* FeatureItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureItem.swift; sourceTree = "<group>"; };
 		B49B049E2C5A92C300725719 /* Navegation_Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navegation_Bar.swift; sourceTree = "<group>"; };
 		B4F6EFDD2C509A2100DB6263 /* KuviDesigniOS15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuviDesigniOS15.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				B4F6EFEE2C52DBCF00DB6263 /* Styles.swift */,
+				B478C1672C5ECE560009B4DE /* AnimatableFontModifier.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			children = (
 				B4F6EFF82C5458BE00DB6263 /* Tab.swift */,
 				B478C1652C5AA90A0009B4DE /* PreferenceKeys.swift */,
+				B478C1692C5EE70E0009B4DE /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,10 +221,12 @@
 				B4F6EFF92C5458BE00DB6263 /* Tab.swift in Sources */,
 				B4F6EFE32C509A2100DB6263 /* ContentView.swift in Sources */,
 				B4F6EFF52C5333FA00DB6263 /* BlogView.swift in Sources */,
+				B478C16A2C5EE70E0009B4DE /* Course.swift in Sources */,
 				B4F6EFE12C509A2100DB6263 /* KuviDesigniOS15App.swift in Sources */,
 				B4F6EFF72C54537D00DB6263 /* TabBar.swift in Sources */,
 				B478C1662C5AA90A0009B4DE /* PreferenceKeys.swift in Sources */,
 				B49B049F2C5A92C300725719 /* Navegation_Bar.swift in Sources */,
+				B478C1682C5ECE560009B4DE /* AnimatableFontModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

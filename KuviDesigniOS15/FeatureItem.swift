@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct FeatureItem: View {
+    var course: Course = courses[0]
     
     var body: some View {
         VStack {
             
-            //Spacer()
+            Spacer()
             
             VStack(alignment: .leading, spacing: 8.0) {
                 Spacer()
                 //Logo
-                Image("Logo 2").resizable()
+                Image(course.logo).resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 26, height: 26).cornerRadius(10)
                     .padding(9)
@@ -26,25 +27,24 @@ struct FeatureItem: View {
                     .strokeStyle()
                     .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x:0, y: 10)
                 //Text Box
-                Text("SwiftUI for iOS 15")
+                Text(course.title)
                     .font(.largeTitle).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).foregroundStyle(.linearGradient(colors: [.primary, .primary.opacity(0.5)],startPoint: .topLeading, endPoint: .bottomTrailing)).lineLimit(1)
                 
-                Text("20 sections - 3 hours".uppercased())
+                Text(course.subtitle.uppercased())
                     .font(.footnote).fontWeight(/*@START_MENU_TOKEN@*/.semibold/*@END_MENU_TOKEN@*/).foregroundStyle(.linearGradient(colors: [.secondary, .primary.opacity(0.3)],startPoint: .topLeading, endPoint: .bottomTrailing)).lineLimit(1)
                 
-                Text("Build an iOS app for iOS 15 with custom layouts, animations and ...")
+                Text(course.image)
                     .font(.caption).multilineTextAlignment(.leading)
                     .lineLimit(2).frame(maxWidth: .infinity,alignment: .leading).foregroundColor(.secondary)
             }
             .padding(.all,20)
             .frame(height: 350)
             .background(.ultraThinMaterial)
-            .cornerRadius(30.0)
-            .shadow(color: Color("Shadow").opacity(0.2), radius: 10, x:0, y: 10)
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            //.cornerRadius(30.0)
             .strokeStyle()
             .padding(.horizontal, 20)
-            .overlay(Image("Illustration 2").resizable().aspectRatio(contentMode: .fit).frame(width: 402.5, height: 238.4).offset(x:20,y: -70)
-            )
+
             
             Spacer()
             
@@ -56,20 +56,7 @@ struct FeatureItem: View {
                     reactHandbook
                 }*/
             }
-        }.background(Image("Blob 1").offset(x:250, y: -200)                   .background(
-            AngularGradient(
-            stops: [
-                Gradient.Stop(color: Color(red: 0.38, green: 0.52, blue: 1).opacity(0.5), location: 0.04),
-            Gradient.Stop(color: Color(red: 0.98, green: 0.9, blue: 0.91).opacity(0.3), location: 0.15),
-            Gradient.Stop(color: Color(red: 1, green: 0.45, blue: 0.71).opacity(0.6), location: 0.34),
-            Gradient.Stop(color: Color(red: 0.51, green: 0.58, blue: 1), location: 0.50),
-            ],
-            center: UnitPoint(x: 0.53, y: 0.32),
-            angle: Angle(degrees: 45.51)
-            ).blur(radius: 50)
-            )
-
-    )
+        }
     
 }
 var handbook: some View {
