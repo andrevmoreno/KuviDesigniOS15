@@ -36,7 +36,6 @@ struct HomeView: View {
                                     .offset(x: 32,y: -80)
                                     .offset(x: minX / 2)
                             )
-                        //Text("\(proxy.frame(in: .global).minX)")
                     }
                 }
             }.tabViewStyle(.page(indexDisplayMode: .never))
